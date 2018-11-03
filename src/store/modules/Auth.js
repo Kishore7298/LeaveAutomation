@@ -1,3 +1,4 @@
+import { router } from "../../main";
 const state = {
     Token: null
 };
@@ -9,6 +10,7 @@ const actions = {
         commit('setToken',"abc");
     },
     logout : ({commit})=>{
+        router.push('/');
         commit('setToken',null);
     }
 };

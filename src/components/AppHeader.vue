@@ -8,9 +8,9 @@
            </div>
            <div class="navbar-nav" v-else>
                
-               <a href="#" class="nav-item nav-link active">Form</a>
-               <a href="#" class="nav-item nav-link active">Pending</a>
-               <a href="#" class="nav-item nav-link active">Approved</a>
+               <router-link to='/' class="nav-item nav-link active">Form</router-link>
+               <router-link to='/pending' class="nav-item nav-link active">Pending</router-link>
+               <router-link to='/approved' class="nav-item nav-link active">Approved</router-link>
                <a href="#" class="nav-item nav-link active" @click="logout">Logout</a>
            </div>
        </div>
@@ -28,7 +28,7 @@ export default {
 <style scoped>
 #all{
     font-family: 'Poppins', sans-serif;
-}
+};
 </style>
 
 

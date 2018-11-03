@@ -2,7 +2,9 @@ import vue from "vue";
 import App from "./App";
 import VueRouter from 'vue-router';
 import store from './store';
-import Form from './components/Form'
+import Form from './components/Form';
+import PendingList from "./components/PendingList";
+import ApprovedList from "./components/ApprovedList"
 
 vue.use(VueRouter);
 export const router = new VueRouter({
@@ -10,7 +12,13 @@ export const router = new VueRouter({
     routes: [
         {
             path:'/', component:Form
-        }
+        },
+        {
+            path:'/pending', component:PendingList
+        },
+        {
+            path:'/approved', component:ApprovedList
+        },
     ]
 });
 new vue({
