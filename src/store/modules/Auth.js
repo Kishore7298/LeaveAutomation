@@ -6,7 +6,7 @@ const getters = {
 };
 const actions = {
     login : ({commit})=>{
-        commit('setToken',1);
+        commit('setToken',"abc");
     },
     logout : ({commit})=>{
         commit('setToken',null);
