@@ -1,7 +1,7 @@
 <template>
     <div>
        <AppHeader></AppHeader>
-       <Form></Form>
+       <router-view></router-view>
     </div>
 </template>
 <script>
