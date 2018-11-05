@@ -1,11 +1,11 @@
 <template>
     <div @click="itemClicked" class="container">
         <div v-if="!isItemClicked">
-            <div><h4>Name of the Student:{{ item.name }}</h4></div>
+            
             <div><h5>Subject:{{ item.sub }}</h5></div>
         </div>
         <div v-else>
-            <div><h4>Name of the Student:{{ item.name }}</h4></div>
+            
             <div><h5>Subject:{{ item.sub }}</h5></div>
             <div><h5>Body:{{ item.body }}</h5></div>
         </div>

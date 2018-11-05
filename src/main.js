@@ -4,7 +4,8 @@ import VueRouter from 'vue-router';
 import store from './store';
 import Form from './components/Form';
 import PendingList from "./components/PendingList";
-import ApprovedList from "./components/ApprovedList"
+import ApprovedList from "./components/ApprovedList";
+import AdminLogin from "./components/AdminLogin";
 
 vue.use(VueRouter);
 export const router = new VueRouter({
@@ -18,6 +19,9 @@ export const router = new VueRouter({
         },
         {
             path:'/approved', component:ApprovedList
+        },
+        {
+            path:'/admin', component:AdminLogin
         },
     ]
 });

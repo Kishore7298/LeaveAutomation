@@ -16,22 +16,22 @@ export default {
         return {
             items:
 [{
-    "name" : "john",
+    
     "sub" : "leave",
     "body" : "hi how are you"
 },
 {
-    "name" : "heller",
+    
     "sub" : "vacation",
     "body" : "im on vacation"
 },
 {
-    "name" : "david",
+    
     "sub" : "college",
     "body" : "how are you"
 },
 {
-    "name" : "michael",
+    
     "sub" : "school",
     "body" : "im okay"
 }]
