@@ -1,8 +1,17 @@
 <template>
-    <div>Hello I'm ApprovedList</div>
+    <div>
+        <ApprovedListItem></ApprovedListItem>
+        
+    </div>
+
 </template>
 <script>
+import ApprovedListItem from "./ApprovedListItem"
 export default {
-    name:"ApprovedList"
+    name:"ApprovedList",
+    components:{
+        ApprovedListItem
+    }
 }
 </script>
+

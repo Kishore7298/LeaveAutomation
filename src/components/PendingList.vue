@@ -1,8 +1,15 @@
 <template>
-   <div>This is pending List!</div> 
+   <div>
+       hello!
+       <PendingListItem></PendingListItem>
+    </div> 
 </template>
 <script>
+import PendingListItem from "./PendingListItem"
 export default {
-    name:"PendingList"
+    name:"PendingList",
+    components:{
+        PendingListItem
+    }
 }
 </script>
