@@ -10,7 +10,6 @@
 </template>
 <script>
 import PendingListItem from "./PendingListItem"
-import samplejson from "../../Assets/pendingList.json"
 export default {
     name:"PendingList",
     data:function(){
