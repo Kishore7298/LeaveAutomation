@@ -43,10 +43,9 @@ export default {
             this.password = event.target.value;
         },
         ...mapActions(['login(token)']),
-        onSubmit(){
-            this.returned = api().get('login');
-            
-            
+        onSubmit(e){
+            e.preventDefault();
+            api().get('auth').then((res,err)=>{console.log(res)});   
     }
 }}
 </script>
