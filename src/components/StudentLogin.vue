@@ -4,27 +4,51 @@
             <div class="form-group ">
                 <label class="col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" style="width:50%;" placeholder="Enter email" name="email">
+                    <input type="email" v-on:input="emailtyped" class="form-control" style="width:50%;" placeholder="Enter email" name="email">
                  </div>
             </div>
              <div class="form-group">
                <label class="col-sm-2" for="pwd">Password:</label>
                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="email" style="width:50%;" placeholder="Enter password" name="password">
+                    <input type="password" v-on:input="passwordtyped" class="form-control" style="width:50%;" placeholder="Enter password" name="password">
                 </div>
              </div>
              <div class="form-group">        
                 <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                    <button @click="onSubmit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
+            {{returned}}
         </form>
     </div>
 </template>
 <script>
+import { mapActions } from "vuex";
+import axios from 'axios';
+import api from '../services/api'
 export default {
-    name:"StudentLogin"
-}
+    name:"StudentLogin",
+    data: function(){
+        return {
+            email:null,
+            password:null,
+            returned:null,
+        }
+    },
+    methods:{
+        emailtyped(event){
+            this.email = event.target.value;
+        },
+        passwordtyped(event){
+            this.password = event.target.value;
+        },
+        ...mapActions(['login(token)']),
+        onSubmit(){
+            this.returned = api().get('login');
+            
+            
+    }
+}}
 </script>
 <style scoped>
 .container{

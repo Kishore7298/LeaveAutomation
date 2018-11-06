@@ -6,6 +6,7 @@ import Form from './components/Form';
 import PendingList from "./components/PendingList";
 import ApprovedList from "./components/ApprovedList";
 import AdminLogin from "./components/AdminLogin";
+import StudentLogin from './components/StudentLogin'
 
 vue.use(VueRouter);
 export const router = new VueRouter({
@@ -23,6 +24,9 @@ export const router = new VueRouter({
         {
             path:'/admin', component:AdminLogin
         },
+        {
+            path:'/login', component:StudentLogin
+        }
     ]
 });
 new vue({

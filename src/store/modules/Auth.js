@@ -6,8 +6,8 @@ const getters = {
     getToken : state=> !!state.Token
 };
 const actions = {
-    login : ({commit})=>{
-        commit('setToken',"abc");
+    login : ({commit},token)=>{
+        commit('setToken',token);
     },
     logout : ({commit})=>{
         router.push('/');

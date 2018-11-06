@@ -4,7 +4,7 @@
        <div class="container">
            <a href="#" class="navbar-brand">Leave Automation</a>
            <div class="navbar-nav" v-if="!getToken">
-               <a href="#" class="nav-item nav-link active" @click="login">Login</a>
+               <router-link to="/login" class="nav-item nav-link active" >Login</router-link>
            </div>
            <div class="navbar-nav" v-else>
                
@@ -22,7 +22,7 @@ import { mapActions, mapGetters } from "vuex";
 export default {
     name:"AppHeader",
     computed:mapGetters(['getToken']),
-    methods:mapActions(['login','logout'])
+    methods:mapActions(['logout'])
 }
 </script>
 <style scoped>
