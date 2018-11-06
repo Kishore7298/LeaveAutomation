@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default() => {
+export default(em,pass) => {
   return axios.create({
     baseURL: `http://localhost:8082`,
     proxy: {
@@ -8,8 +8,8 @@ export default() => {
         port: 8081,
       },
     params:{
-        email:"kishoreas7298@gmail.com",
-        password:"1234"
+        email:em,
+        password:pass
     }
 })
 }

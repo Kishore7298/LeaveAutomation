@@ -18,21 +18,21 @@
                     <button @click="onSubmit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-            {{returned}}
+            
         </form>
     </div>
 </template>
 <script>
 import { mapActions } from "vuex";
 import axios from 'axios';
-import api from '../services/api'
+import api from '../services/api';
+import { router } from "../main";
 export default {
     name:"StudentLogin",
     data: function(){
         return {
             email:null,
-            password:null,
-            returned:null,
+            password:null
         }
     },
     methods:{
@@ -42,10 +42,16 @@ export default {
         passwordtyped(event){
             this.password = event.target.value;
         },
-        ...mapActions(['login(token)']),
+        ...mapActions(['login']),
         onSubmit(e){
             e.preventDefault();
-            api().get('auth').then((res,err)=>{console.log(res)});   
+            api(this.email,this.password).get('auth').then((res,err)=>{
+                if(res.data.length != 0){
+                    this.login(this.email);
+                    router.push('/');
+                }
+            
+            });   
     }
 }}
 </script>
