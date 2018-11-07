@@ -2,11 +2,13 @@
     <div @click="itemClicked" class="container">
         <div v-if="!isItemClicked">
             <div><h5>To:{{ item.to }}</h5></div>
-            <div><h5>Reference:{{ item.reference }}</h5></div>
+            <div><h5>Through:{{ item.through }}</h5></div>
+            <div><h5>Subject:{{ item.sub }}</h5></div>
         </div>
         <div v-else>
             <div><h5>To:{{ item.to }}</h5></div>
-            <div><h5>Reference:{{ item.reference }}</h5></div>
+            <div><h5>Through:{{ item.through }}</h5></div>
+            <div><h5>Subject:{{ item.sub }}</h5></div>
             <div><h5>Body:{{ item.body }}</h5></div>
         </div>
     </div>
