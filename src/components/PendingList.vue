@@ -14,27 +14,7 @@ export default {
     name:"PendingList",
     data:function(){
         return {
-            items:
-[{
-    
-    "sub" : "leave",
-    "body" : "hi how are you"
-},
-{
-    
-    "sub" : "vacation",
-    "body" : "im on vacation"
-},
-{
-    
-    "sub" : "college",
-    "body" : "how are you"
-},
-{
-    
-    "sub" : "school",
-    "body" : "im okay"
-}]
+            items:null
         }
     },
     components:{

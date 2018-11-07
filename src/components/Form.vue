@@ -3,31 +3,23 @@
         <div v-if="getToken">
             <form>
                 <div class="form-group">
-                    <h2>Application Form</h2>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">From</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <h2 style="font-family: 'Poor Story', cursive;">Application Form</h2>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">To</label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option v-for="item in names">{{item.name}}</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Reference</label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option v-for="item in names">{{item.name}}</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Subject</label>
+                    <input type="email" class="form-control">
                 </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Body</label>
@@ -44,15 +36,27 @@
     </div>
 </template>
 <script>
+import admins from '../services/admins';
+import axios from 'axios';
 import { mapGetters } from "vuex";
 export default {
   name: "Form",
-  computed:mapGetters(['getToken'])
+  data:function(){
+      return {
+          names:null
+      }
+  },
+  computed:mapGetters(['getToken']),
+  created(){
+      admins().get('admins').then((res,err)=>{
+           this.names = res.data;
+      })
+  }
 };
 </script>
 <style scoped>
 .container {
-  font-family: 'Hind', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin-top: 20px;
 }
 </style>
