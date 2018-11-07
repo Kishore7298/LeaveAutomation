@@ -3,7 +3,8 @@ const state = {
     Token: null
 };
 const getters = {
-    getToken : state=> !!state.Token
+    getToken : state=> !!state.Token,
+    getEmail : state=>state.Token
 };
 const actions = {
     login : ({commit},token)=>{

@@ -9,7 +9,9 @@
     </div> 
 </template>
 <script>
-import PendingListItem from "./PendingListItem"
+import PendingListItem from "./PendingListItem";
+import pending from '../services/getPending';
+import { mapGetters } from "vuex";
 export default {
     name:"PendingList",
     data:function(){
@@ -17,8 +19,14 @@ export default {
             items:null
         }
     },
+    computed: mapGetters(['getEmail']),
     components:{
         PendingListItem
+    },
+    created(){
+        pending(this.getEmail).get('pending').then((result,err)=>{
+             this.items = result.data;
+        })
     }
 }
 </script>
