@@ -5,7 +5,8 @@ const state = {
 };
 const getters = {
     getToken : state=> !!state.Token,
-    getEmail : state=>state.Token
+    getEmail : state=>state.Token,
+    getName : state => state.name
 };
 const actions = {
     login : ({commit},token)=>{

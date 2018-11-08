@@ -1,13 +1,16 @@
 <template>
      <div @click="itemClicked" class="container">
         <div v-if="!isItemClicked">
-            <div><h5>To:{{ item.to }}</h5></div>
-            <div><h5>Reference:{{ item.reference }}</h5></div>
+            <div><h5>To : {{ item.to }}</h5></div>
+            <div><h5>Through : {{ item.through }}</h5></div>
+            <div><h5>Subject : {{ item.sub }}</h5></div>
         </div>
         <div v-else>
-            <div><h5>To:{{ item.to }}</h5></div>
-            <div><h5>Reference:{{ item.reference }}</h5></div>
-            <div><h5>Body:{{ item.body }}</h5></div>
+            <div><h5>To : {{ item.to }}</h5></div>
+            <div><h5>Through : {{ item.through }}</h5></div>
+            <div><h5>Subject : {{ item.sub }}</h5></div>
+            <div><h5>Body : {{ item.body }}</h5></div>
+            <div><h5>ID : {{ item._id }}</h5></div>
         </div>
     </div>
 </template>
@@ -32,8 +35,10 @@ export default {
 <style scoped>
 .container{
     margin: 20px;
-    background-color:floralwhite;
-    border: 2px solid gray;
+    background-color:rgb(214, 210, 202);
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 10px;
     
 }
 </style>
