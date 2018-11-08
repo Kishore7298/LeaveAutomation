@@ -45,14 +45,8 @@ export default {
         ...mapActions(['login','name']),
         onSubmit(e){
             e.preventDefault();
-            api(this.email,this.password).get('auth').then((res,err)=>{
-                if(res.data.length != 0){
-                    this.name(res.data.email[0].name);
-                    this.login(this.email);
-                    router.push('/'); 
-                }
             
-            });   
+              
     }
 }}
 </script>

@@ -43,7 +43,7 @@ export default {
                 if(res.data.length != 0){
                     this.adminName = res.data.name[0].name;
                     this.adminLogin(this.adminName);
-                    router.push('/adminfeed'); 
+                    router.push('/request'); 
                 }
             
             }); 

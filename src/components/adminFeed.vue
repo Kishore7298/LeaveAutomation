@@ -8,4 +8,7 @@ export default {
     name:"adminFeed",
 }
 </script>
+<style scoped>
+
+</style>
 

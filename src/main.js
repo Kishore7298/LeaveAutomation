@@ -29,7 +29,7 @@ export const router = new VueRouter({
             path:'/login', component:StudentLogin
         },
         {
-            path:'/adminfeed', component:adminFeed
+            path:'/request', component:adminFeed
         }
     ]
 });
