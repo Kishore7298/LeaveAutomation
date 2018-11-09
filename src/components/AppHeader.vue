@@ -13,7 +13,7 @@
            <div class="navbar-nav" v-if="isLoggedIn">
                
                <router-link to='/request' class="nav-item nav-link active">Request</router-link>
-               <router-link to='/pending' class="nav-item nav-link active">Through</router-link>
+               <router-link to='/through' class="nav-item nav-link active">Through</router-link>
                <router-link to='/approved' class="nav-item nav-link active">Approved</router-link>
                <a href="#" class="nav-item nav-link active" @click="adminLogout">Logout</a>
            </div>

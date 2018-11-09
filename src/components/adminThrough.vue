@@ -1,12 +1,12 @@
 <template>
     <div>
-       <adminFeedItem v-for="item in items" v-bind:item="item">
+       <adminThroughList v-for="item in items" v-bind:item="item">
 
-       </adminFeedItem>
+       </adminThroughList>
     </div>
 </template>
 <script>
-import adminFeedItem from './adminFeedItem';
+import adminThroughList from './adminThroughList';
 import reqRef from '../services/reqRef';
 import { mapGetters } from "vuex";
 export default {
@@ -17,11 +17,11 @@ export default {
         }
     },
     components:{
-        adminFeedItem
+        adminThroughList
     },
     computed: mapGetters(['getAdminName']),
     created(){
-        reqRef(this.getAdminName).get('request').then((result,err)=>{
+        reqRef(this.getAdminName).get('reference').then((result,err)=>{
              this.items = result.data;
         })
     }
