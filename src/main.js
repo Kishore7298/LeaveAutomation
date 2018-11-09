@@ -9,7 +9,8 @@ import AdminLogin from "./components/AdminLogin";
 import StudentLogin from './components/StudentLogin';
 import adminFeed from './components/adminFeed';
 import adminThrough from './components/adminThrough';
-import status from './components/status'
+import status from './components/status';
+import adminApproved from './components/adminApproved'
 
 vue.use(VueRouter);
 export const router = new VueRouter({
@@ -38,6 +39,9 @@ export const router = new VueRouter({
         },
         {
             path:'/status', component:status
+        },
+        {
+            path:'/adminapproved', component:adminApproved
         }
     ]
 });

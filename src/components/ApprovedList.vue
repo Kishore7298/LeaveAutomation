@@ -16,7 +16,7 @@ export default {
     },
     data:function(){
         return {
-            items:null
+            items:[]
         }
     },
     computed: mapGetters(['getEmail']),

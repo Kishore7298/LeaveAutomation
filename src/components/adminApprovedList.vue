@@ -10,15 +10,12 @@
             <div><h5>Through : {{ item.through }}</h5></div>
             <div><h5>Subject : {{ item.sub }}</h5></div>
             <div><h5>Body : {{ item.body }}</h5></div>
-            <div class="btn-group"><button @click="onAdminApprove" class="btn btn-primary">Approve</button><button class="btn btn-primary">Decline</button></div>
         </div>
     </div>
 </template>
 <script>
-import axios from 'axios';
-import checkStatus from '../services/checkStatus'
 export default {
-    name:"adminFeedItem",
+    name:"adminApprovedList",
     data:function(){
         return {
             isItemClicked:false
@@ -30,9 +27,6 @@ export default {
                 this.isItemClicked = true;
             else
                 this.isItemClicked = false;
-        },
-        onAdminApprove(){
-            checkStatus(this.item._id).get('throughAdminApprove');
         }
     },
     props:["item"]
