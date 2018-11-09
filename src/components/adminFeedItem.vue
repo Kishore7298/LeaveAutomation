@@ -10,7 +10,7 @@
             <div><h5>Through : {{ item.through }}</h5></div>
             <div><h5>Subject : {{ item.sub }}</h5></div>
             <div><h5>Body : {{ item.body }}</h5></div>
-            <div><button>Approve</button><button>Decline</button></div>
+            <div class="btn-group"><button @click="onAdminApprove" class="btn btn-primary">Approve</button><button>Decline</button></div>
         </div>
     </div>
 </template>
@@ -28,6 +28,9 @@ export default {
                 this.isItemClicked = true;
             else
                 this.isItemClicked = false;
+        },
+        onAdminApprove(){
+            checkStatus(this.item._id).get('toAdminApprove');
         }
     },
     props:["item"]
