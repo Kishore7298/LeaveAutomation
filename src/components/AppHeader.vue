@@ -18,6 +18,7 @@
                <a href="#" class="nav-item nav-link active" @click="adminLogout">Logout</a>
            </div>
            <div class="navbar-nav" v-if="!getToken && !isLoggedIn">
+               <router-link to="/status" class="nav-item nav-link active" >Status</router-link>
                <router-link to="/login" class="nav-item nav-link active" >Login</router-link>
            </div>
            

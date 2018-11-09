@@ -8,7 +8,8 @@ import ApprovedList from "./components/ApprovedList";
 import AdminLogin from "./components/AdminLogin";
 import StudentLogin from './components/StudentLogin';
 import adminFeed from './components/adminFeed';
-import adminThrough from './components/adminThrough'
+import adminThrough from './components/adminThrough';
+import status from './components/status'
 
 vue.use(VueRouter);
 export const router = new VueRouter({
@@ -34,6 +35,9 @@ export const router = new VueRouter({
         },
         {
             path:'/through', component:adminThrough
+        },
+        {
+            path:'/status', component:status
         }
     ]
 });
