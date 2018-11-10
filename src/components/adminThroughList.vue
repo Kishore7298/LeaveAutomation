@@ -33,6 +33,7 @@ export default {
         },
         onAdminApprove(){
             checkStatus(this.item._id).get('throughAdminApprove');
+            isItemClicked=true;
         }
     },
     props:["item"]

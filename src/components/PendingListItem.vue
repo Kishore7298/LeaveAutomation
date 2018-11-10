@@ -1,5 +1,5 @@
 <template>
-    <div @click="itemClicked" class="container">
+    <div @click="itemClicked" class="container animated rollIn">
         <div v-if="!isItemClicked">
             <div><h5>To : {{ item.to }}</h5></div>
             <div><h5>Through : {{ item.through }}</h5></div>
@@ -34,9 +34,9 @@ export default {
 .container{
     margin: 20px;
     background-color:rgb(214, 210, 202);
-    border: 1px solid gray;
+    border: 0.5px solid gray;
     border-radius: 6px;
     padding: 10px;
-    
+    box-shadow: 5px 5px 5px #9b8585;
 }
 </style>

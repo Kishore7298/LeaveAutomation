@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container animated bounceInLeft">
         <form class="form-horizontal">
             <div class="form-group ">
                 <label class="col-sm-2" for="email">Email:</label>

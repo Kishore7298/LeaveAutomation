@@ -1,6 +1,6 @@
 import { router } from "../../main";
 const state = {
-    adminName:null
+    adminName:window.localStorage.getItem('admin_access_token')
 };
 const getters = {
     isLoggedIn : state=>!!state.adminName,
@@ -9,10 +9,12 @@ const getters = {
 const actions = {
     adminLogin({commit},name){
         commit('setAdminName',name)
+        window.localStorage.setItem('admin_access_token',name);
     },
     adminLogout({commit}){
         commit('setAdminName',null);
-        router.push('/')
+        router.push('/');
+        window.localStorage.removeItem('admin_access_token');
     }
 };
 const mutations = {

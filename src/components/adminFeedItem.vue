@@ -10,11 +10,13 @@
             <div><h5>Through : {{ item.through }}</h5></div>
             <div><h5>Subject : {{ item.sub }}</h5></div>
             <div><h5>Body : {{ item.body }}</h5></div>
-            <div class="btn-group"><button @click="onAdminApprove" class="btn btn-primary">Approve</button><button>Decline</button></div>
+            <div class="btn-group"><button @click="onAdminApprove" class="btn btn-primary">Approve</button><button class="btn btn-primary">Decline</button></div>
         </div>
     </div>
 </template>
 <script>
+import checkStatus from '../services/checkStatus';
+import axios from 'axios';
 export default {
     name:"adminFeedItem",
     data:function(){

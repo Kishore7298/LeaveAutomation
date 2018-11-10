@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container animated lightSpeedIn">
         <div v-if="getToken">
             <form>
                 <div class="form-group">

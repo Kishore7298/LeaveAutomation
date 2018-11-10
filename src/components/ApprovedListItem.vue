@@ -1,5 +1,5 @@
 <template>
-     <div @click="itemClicked" class="container">
+     <div @click="itemClicked" class="container animated rotateIn">
         <div v-if="!isItemClicked">
             <div><h5>To : {{ item.to }}</h5></div>
             <div><h5>Through : {{ item.through }}</h5></div>
@@ -39,6 +39,7 @@ export default {
     border: 1px solid gray;
     border-radius: 6px;
     padding: 10px;
+    box-shadow: 5px 5px 5px #888888;
     
 }
 </style>

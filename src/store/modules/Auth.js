@@ -1,6 +1,6 @@
 import { router } from "../../main";
 const state = {
-    Token: null,
+    Token: window.localStorage.getItem('access_token'),
     name:null,
 };
 const getters = {
@@ -11,10 +11,12 @@ const getters = {
 const actions = {
     login : ({commit},token)=>{
         commit('setToken',token);
+        window.localStorage.setItem('access_token',token);
     },
     logout : ({commit})=>{
         router.push('/');
         commit('setToken',null);
+        window.localStorage.removeItem('access_token');
     },
     name : ({commit},name)=>{
         commit('setName',name);

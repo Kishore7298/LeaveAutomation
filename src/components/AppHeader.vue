@@ -1,6 +1,6 @@
 <template>
   <div id='all'>
-   <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+   <nav class="navbar bg-dark navbar-dark navbar-expand-sm animated slideInDown">
        <div class="container">
            <a href="#" class="navbar-brand">Leave Automation</a>
            <div class="navbar-nav" v-if="getToken">
