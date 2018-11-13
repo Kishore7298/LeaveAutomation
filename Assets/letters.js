@@ -2,12 +2,13 @@
     {
         name:"kishore",
         email:"kishoreas7298@gmail.com",
-        to:"karthik",
-        through:"vasudev",
+        to:"Dr Karthik Pai",
+        through:"Vasudev Pai",
         sub:"MSE3 Permission Letter",
         body:"I couldn't attend mse2 so please give me permission to write mse3",
         toApproved:false,
-        throughApproved:false
+        throughApproved:false,
+        rejected:false
     },
     {
         name:"nandan",

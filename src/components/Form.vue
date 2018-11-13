@@ -62,7 +62,8 @@ export default {
               sub: this.subject,
               body: this.body,
               toApproved:false,
-              throughApproved:false
+              throughApproved:false,
+              rejected:false
           }
             var jsonObj = JSON.stringify(obj);
             console.log(jsonObj);
